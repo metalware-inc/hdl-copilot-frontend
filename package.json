@@ -1,0 +1,273 @@
+{
+	"name": "hdl-copilot",
+	"displayName": "HDL Copilot",
+	"description": "Formatting, linting and code generation for SystemVerilog.",
+	"publisher": "metalware-inc",
+	"icon": "images/128x128_icon.png",
+	"version": "0.0.49",
+	"type": "commonjs",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Linters",
+		"Formatters",
+		"Programming Languages",
+		"Snippets"
+	],
+	"files": [
+		"images/*",
+		"bin/*"
+	],
+	"keywords": [
+		"systemverilog",
+		"verilog",
+		"hdl",
+		"rtl",
+		"linter",
+		"formatter",
+		"hdl-copilot",
+		"asic",
+		"fpga"
+	],
+	"bugs": {
+		"url": "https://discord.gg/gntuHgpfDH",
+		"email": "contact@metalware.io"
+	},
+	"homepage": "https://metalware.io",
+	"pricing": "Trial",
+	"activationEvents": [
+		"onView:hdl-copilot"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"colors": [
+			{
+				"id": "decoration.excluded",
+				"description": "Color for excluded files in the file explorer",
+				"defaults": {
+					"dark": "#616161",
+					"light": "#616161",
+					"highContrast": "#616161"
+				}
+			},
+			{
+				"id": "decoration.projectDir",
+				"description": "Color for project directory in the file explorer",
+				"defaults": {
+					"dark": "#005e00",
+					"light": "#005e00",
+					"highContrast": "#005e00"
+				}
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "hdl-copilot",
+					"title": "HDL Copilot",
+					"icon": "images/hdl_copilot_icon.svg"
+				}
+			]
+		},
+		"views": {
+			"hdl-copilot": [
+				{
+					"id": "projectView",
+					"name": "HDL Project View"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "extension.showExperimentalBox",
+				"title": "HDL Copilot: (Experimental) Generate/modify SVA"
+			},
+			{
+				"command": "extension.setSystemVerilogProject",
+				"title": "HDL Copilot: Set Verilog (SystemVerilog) Project"
+			},
+			{
+				"command": "extension.openPreferences",
+				"title": "HDL Copilot: Open Preferences"
+			},
+			{
+				"command": "fileExplorer.includeInCompilation",
+				"title": "HDL Copilot: Include in Compilation"
+			},
+			{
+				"command": "fileExplorer.excludeFromCompilation",
+				"title": "HDL Copilot: Exclude from Compilation"
+			},
+			{
+				"command": "extension.setLicense",
+				"title": "HDL Copilot: Set License"
+			},
+			{
+				"command": "fileExplorer.addFolderToProject",
+				"title": "Add Folder to Project",
+				"icon": "$(new-folder)"
+			},
+			{
+				"command": "fileExplorer.removeFolderFromProject",
+				"title": "HDL Copilot: Remove Folder from Project"
+			},
+			{
+				"command": "extension.sendDebugLog",
+				"title": "HDL Copilot: Send Debug Log"
+			}
+		],
+		"menus": {
+			"explorer/context": [],
+			"view/title": [
+				{
+					"command": "fileExplorer.addFolderToProject",
+					"when": "view == projectView",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "fileExplorer.removeFolderFromProject",
+					"when": "hdlProjectSelected && view == projectView && viewItem == projectFolder",
+					"group": "navigation"
+				},
+				{
+					"command": "fileExplorer.includeInCompilation",
+					"when": "hdlProjectSelected && view == projectView",
+					"group": "navigation"
+				},
+				{
+					"command": "fileExplorer.excludeFromCompilation",
+					"when": "hdlProjectSelected && view == projectView",
+					"group": "navigation"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "extension.showExperimentalBox",
+				"key": "cmd+alt+k",
+				"when": "editorTextFocus",
+				"mac": "cmd+k k"
+			}
+		],
+		"grammars": [
+			{
+				"language": "SystemVerilog",
+				"scopeName": "source.verilog",
+				"path": "./syntaxes/verilog.tmGrammar.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "SystemVerilog",
+				"aliases": [
+					"SystemVerilog",
+					"systemverilog",
+					"verilog",
+					"Verilog"
+				],
+				"extensions": [
+					".v",
+					".verilog",
+					".V",
+					".vh",
+					".h",
+					".vH",
+					".Vh",
+					".VH",
+					".sv",
+					".SV",
+					".sV",
+					".Sv",
+					".svh",
+					".Svh",
+					".sVh",
+					".svH",
+					".SVh",
+					".SvH",
+					".sVH",
+					".SVH",
+					".svi",
+					".svI",
+					".sVi",
+					".sVI",
+					".Svi",
+					".SvI",
+					".SVi",
+					".SVI",
+					".vlib",
+					".vliB",
+					".vlIb",
+					".vlIB",
+					".vLib",
+					".vLiB",
+					".vLIb",
+					".vLIB",
+					".Vlib",
+					".VliB",
+					".VlIb",
+					".VlIB",
+					".VLib",
+					".VLiB",
+					".VLIb",
+					".VLIB",
+					".vp",
+					".vP",
+					".Vp",
+					".VP",
+					".svp",
+					".svP",
+					".sVp",
+					".sVP",
+					".Svp",
+					".SvP",
+					".SVp",
+					".SVP"
+				],
+				"configuration": "./systemverilog.configuration.jsonc"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "npm run compile-tests && npm run compile",
+		"lint": "eslint src --ext ts",
+		"test": "vscode-test"
+	},
+	"devDependencies": {
+		"@types/chai": "4.3.4",
+		"@types/lodash": "^4.17.0",
+		"@types/mocha": "^10.0.6",
+		"@types/mock-fs": "^4.13.4",
+		"@types/node": "18.x",
+		"@types/sinon": "^17.0.3",
+		"@types/uuid": "^9.0.8",
+		"@types/vscode": "^1.85.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.2",
+		"@typescript-eslint/parser": "^7.0.2",
+		"@vscode/test-cli": "^0.0.6",
+		"@vscode/test-electron": "^2.3.9",
+		"eslint": "^8.56.0",
+		"mockfs": "^0.1.5",
+		"posthog-node": "^3.6.3",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.3.3",
+		"vscode-languageclient": "^9.0.1",
+		"webpack": "^5.90.3",
+		"webpack-cli": "^5.1.4"
+	},
+	"dependencies": {
+		"chai": "4.3.4",
+		"lodash": "^4.17.21",
+		"mock-fs": "^5.2.0",
+		"sinon": "^17.0.1",
+		"uuid": "^9.0.1"
+	}
+}

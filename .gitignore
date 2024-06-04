@@ -1,0 +1,9 @@
+bin/*/hdl_copilot_server*
+node_modules/
+*.vsix
+*/.DS_Store
+.DS_Store
+*.sw*
+dist/*
+.vscode-test
+out/*

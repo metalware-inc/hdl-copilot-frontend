@@ -1,0 +1,58 @@
+{
+  "comments": {
+      "lineComment": "//",
+      "blockComment": ["/*", "*/"]
+  },
+  // Symbols used as brackets.
+  "brackets": [
+      ["(", ")"],
+      ["{", "}"],
+      ["[", "]"],
+      ["begin", "end"],
+      ["case", "endcase"],
+      ["casex", "endcase"],
+      ["casez", "endcase"],
+      ["config", "endconfig"],
+      ["fork", "join"],
+      ["function", "endfunction"],
+      ["generate", "endgenerate"],
+      ["macromodule", "endmodule"],
+      ["module", "endmodule"],
+      ["primitive", "endprimitive"],
+      ["specify", "endspecify"],
+      ["table", "endtable"],
+      ["task", "endtask"],
+      ["interface", "endinterface"],
+      ["program", "endprogram"],
+      ["package", "endpackage"],
+      ["class", "endclass"],
+      ["covergroup", "endgroup"],
+      ["property", "endproperty"],
+      ["sequence", "endsequence"],
+      ["clocking", "endclocking"]
+  ],
+  // Symbols that are auto closed when typing.
+  "autoClosingPairs": [
+      ["{", "}"],
+      ["[", "]"],
+      ["(", ")"],
+      ["'", "'"],
+      {"open":"\"", "close":"\"", "notIn":["string"]}
+  ],
+  // Symbols that that can be used to surround a selection.
+  "surroundingPairs": [
+      ["{", "}"],
+      ["[", "]"],
+      ["(", ")"],
+      ["\"", "\""],
+      ["'", "'"]
+  ],
+  // Fold on comments that start with a specific string.
+  "folding": {
+      "offSide": true,
+      "markers": {
+          "start": "^\\s*[//]*region",
+          "end": "^\\s*[//]*endregion"
+      }
+  }
+}
