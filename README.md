@@ -2,6 +2,17 @@
 # HDL Copilot
 ## Note: Metalware no longer actively maintains this extension. You can find the source code for the backend binaries [here](https://github.com/metalware-inc/hdl-copilot-backend).
 
+Place the binary for your system in the `bin` folder. One of the following is required:
+
+- `bin/linux/hdl_copilot_server_x86-64_packed`
+- `bin/linux/hdl_copilot_server_aarch64_packed`
+- `bin/win/hdl_copilot_server.exe`
+- `bin/macos/hdl_copilot_server`
+
+Instructions how to build the backend can be found [here](https://github.com/metalware-inc/hdl-copilot-backend).
+
+##
+
 #### [Homepage](https://www.metalware.io/) | [Documentation](https://docs.metalware.io/hdl-copilot/) | [Changelog](https://marketplace.visualstudio.com/items/metalware-inc.hdl-copilot/changelog) | [Support](https://discord.gg/gntuHgpfDH)
 
 Blazing-fast linting, formatting, go-to-definition, and code completion for (System) Verilog.
