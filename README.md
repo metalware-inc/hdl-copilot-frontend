@@ -1,4 +1,6 @@
+
 # HDL Copilot
+## Note: Metalware no longer actively maintains this extension. You can find the source code for the backend binaries [here](https://github.com/metalware-inc/hdl-copilot-backend).
 
 #### [Homepage](https://www.metalware.io/) | [Documentation](https://docs.metalware.io/hdl-copilot/) | [Changelog](https://marketplace.visualstudio.com/items/metalware-inc.hdl-copilot/changelog) | [Support](https://discord.gg/gntuHgpfDH)
 
@@ -9,7 +11,6 @@ Read our full documentation and FAQs [here](https://docs.metalware.io/hdl-copilo
 
 * **Linux (glibc >= 2.31, x86-64, aarch64) and Windows x64**
 * Currently supports **Verilog / SystemVerilog** only (IEEE 1800-2017)
-* Request a free license [here](https://license.metalware.io/) (takes <1 min)
 
 ## Autocomplete & Lint
 
