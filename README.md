@@ -2,12 +2,18 @@
 # HDL Copilot
 ## Note: Metalware no longer actively maintains this extension. You can find the source code for the backend binaries [here](https://github.com/metalware-inc/hdl-copilot-backend).
 
-Place the binary for your system in the `bin` folder. One of the following is required:
+Link the backend binary for your system in the `bin` folder. One of the following is required:
 
 - `bin/linux/hdl_copilot_server_x86-64_packed`
 - `bin/linux/hdl_copilot_server_aarch64_packed`
 - `bin/win/hdl_copilot_server.exe`
 - `bin/macos/hdl_copilot_server`
+
+
+Example:
+```
+ln -s ~/hdl-copilot-backend/server/build/src/hdl_copilot_server ~/hdl-copilot-frontend/bin/macos/hdl_copilot_server
+```
 
 Instructions how to build the backend can be found [here](https://github.com/metalware-inc/hdl-copilot-backend).
 
